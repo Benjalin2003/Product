@@ -19,11 +19,11 @@ def test_set_discount(db_product):
 def test_get_final_price_with_discount(db_product):
     db_product.set_discount(20)
     final_price = db_product.get_final_price()
-    assert final_price == 80
+    assert final_price == 160
 
 def test_get_final_price_without_discount(db_product):
     final_price = db_product.get_final_price()
-    assert final_price == 100
+    assert final_price == 200
 
 def test_change_price(db_product):
     db_product.change_price(150)
